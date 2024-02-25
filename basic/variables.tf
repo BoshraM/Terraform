@@ -47,3 +47,14 @@ variable "myobject" {
     port = [22, 25, 80]
   }
 }
+
+
+variable "ingressrules" {
+  type    = list(number)
+  default = [80, 443]
+}
+
+variable "egressrules" {
+  type    = list(number)
+  default = [80, 443, 25, 3306, 53, 8080]
+}
