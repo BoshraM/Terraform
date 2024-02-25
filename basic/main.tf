@@ -13,3 +13,7 @@ resource "aws_instance" "ec2-terraform" {
     Name = var.ec2name
   }
 }
+
+resource "aws_eip" "eip" {
+  instance = aws_instance.ec2-terraform.id
+}
