@@ -3,6 +3,11 @@ variable "vpcname" {
   default = "myvpc"
 }
 
+variable "ec2name" {
+  type    = string
+  default = "myec2"
+}
+
 variable "sshport" {
   type    = number
   default = 22
@@ -25,10 +30,10 @@ variable "mymap" {
   }
 }
 
-variable "inputname" {
-  type        = string
-  description = "set the name of the vpc"
-}
+# variable "inputname" {
+#   type        = string
+#   description = "set the name of the vpc"
+# }
 
 variable "mytuple" {
   type    = tuple([string, number, string])
