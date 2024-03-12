@@ -26,21 +26,21 @@ provider "aws" {
 
 /// craeting PostgreSQL RDS ////
 
-# resource "aws_db_instance" "mypsql" {
-#   engine              = "Postgres"
-#   identifier          = "mypsql"
-#   allocated_storage   = 20
-#   engine_version      = "16.1"
-#   db_name             = "mypsql"
-#   instance_class      = "db.t3.micro"
-#   username            = "postgres"
-#   password            = "admin1234"
-#   skip_final_snapshot = true
-#   publicly_accessible = true
-# }
+resource "aws_db_instance" "mypsql" {
+  engine              = "Postgres"
+  identifier          = "mypsql"
+  allocated_storage   = 20
+  engine_version      = "16.1"
+  db_name             = "mypsql"
+  instance_class      = "db.t3.micro"
+  username            = "postgres"
+  password            = "admin1234"
+  skip_final_snapshot = true
+  publicly_accessible = true
+}
 
 
-# output "db_instance_endpoint" {
-#   value = aws_db_instance.mypsql.endpoint
+output "db_instance_endpoint" {
+  value = aws_db_instance.mypsql.endpoint
 
-# }
+}
